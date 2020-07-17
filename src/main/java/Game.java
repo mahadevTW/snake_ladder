@@ -1,14 +1,14 @@
 import model.Board;
-import model.Dice;
 import model.Player;
+import model.Throwable;
 
 public class Game {
     private final Board board;
-    private final Dice dice;
+    private final Throwable dice;
     private Player player;
     private final int turns;
 
-    public Game(Board board, Dice dice, Player player, int turns) {
+    public Game(Board board, Throwable dice, Player player, int turns) {
         this.board = board;
         this.dice = dice;
         this.player = player;

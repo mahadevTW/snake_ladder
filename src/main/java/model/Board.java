@@ -1,13 +1,11 @@
 package model;
 
 public class Board {
-    private final int minPosition;
-    private final int maxPosition;
+    private final int lastPosition;
     private final Snake snake;
 
-    public Board(int minPosition, int maxPosition, Snake snake) {
-        this.minPosition = minPosition;
-        this.maxPosition = maxPosition;
+    public Board(int lastPosition, Snake snake) {
+        this.lastPosition = lastPosition;
         this.snake = snake;
     }
 
