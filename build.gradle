@@ -26,9 +26,7 @@ dependencies {
     // testCompile dependency to testCompile 'org.testng:testng:6.8.1' and add
     // 'test.useTestNG()' to your build script.
     testCompile 'junit:junit:4.12'
+    testCompile('org.junit.jupiter:junit-jupiter-api:5.4.0')
+    testRuntime('org.junit.jupiter:junit-jupiter-engine:5.4.0')
+    testRuntime('org.junit.vintage:junit-vintage-engine:5.4.0')
 }
-
-test {
-    useJUnitPlatform()
-}
-test.outputs.upToDateWhen { false }
