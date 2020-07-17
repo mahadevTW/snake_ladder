@@ -15,13 +15,15 @@ public class Game {
         this.turns = turns;
     }
 
-    void start() {
+    void start() throws InterruptedException {
         for (int i = 0; i < turns; i++) {
             int result = dice.throw_();
             int newPosition = board.getNewPlayerPosition(player, result);
             player.setPosition(newPosition);
             System.out.println("Turn " + i + 1);
             System.out.println(player);
+            Thread.sleep(500);
         }
     }
 }
+
