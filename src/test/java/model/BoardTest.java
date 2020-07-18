@@ -10,7 +10,7 @@ public class BoardTest {
         Player player = new Player("mahadev");
         Snake snake = new Snake(2, 10);
         Board board = new Board(100, snake);
-        int newPlayerPosition = board.getNewPlayerPosition(player, 3);
+        int newPlayerPosition = board.getNewPosition(player, 3);
         Assert.assertEquals(3, newPlayerPosition);
     }
 
@@ -19,7 +19,7 @@ public class BoardTest {
         Player player = new Player("mahadev");
         Snake snake = new Snake(5, 2);
         Board board = new Board(100, snake);
-        int newPlayerPosition = board.getNewPlayerPosition(player, 5);
+        int newPlayerPosition = board.getNewPosition(player, 5);
         Assert.assertEquals(2, newPlayerPosition);
     }
 }

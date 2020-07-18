@@ -20,7 +20,7 @@ repositories {
 }
 
 
-apply plugin : "java"
+apply plugin: "java"
 ext {
     javaMainClass = "SnakeLadderApplication"
 }
@@ -41,5 +41,6 @@ dependencies {
     testCompile('org.junit.jupiter:junit-jupiter-api:5.4.0')
     testRuntime('org.junit.jupiter:junit-jupiter-engine:5.4.0')
     testRuntime('org.junit.vintage:junit-vintage-engine:5.4.0')
+    testCompile group: 'org.mockito', name: 'mockito-all', version: '1.10.16'
 }
 

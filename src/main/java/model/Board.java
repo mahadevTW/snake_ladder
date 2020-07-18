@@ -9,7 +9,7 @@ public class Board {
         this.snake = snake;
     }
 
-    public int getNewPlayerPosition(Player player, int diceResult) {
+    public int getNewPosition(Player player, int diceResult) {
         int newPosition = player.getPosition() + diceResult;
         if (snake.getHead() == newPosition) {
             return snake.getTail();
