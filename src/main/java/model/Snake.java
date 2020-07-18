@@ -9,11 +9,14 @@ public class Snake {
         this.tail = tail;
     }
 
-    public int getTail() {
-        return tail;
+    public boolean canEatAt(int position) {
+        return position == head;
     }
 
-    public int getHead() {
-        return head;
+    public int eat(int position) {
+        if (!canEatAt(position)) {
+            return position;
+        }
+        return tail;
     }
 }

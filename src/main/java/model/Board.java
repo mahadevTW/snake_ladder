@@ -11,8 +11,8 @@ public class Board {
 
     public int getNewPosition(Player player, int diceResult) {
         int newPosition = player.getPosition() + diceResult;
-        if (snake.getHead() == newPosition) {
-            return snake.getTail();
+        if (snake.canEatAt(newPosition)) {
+            return snake.eat(newPosition);
         }
         return newPosition;
     }

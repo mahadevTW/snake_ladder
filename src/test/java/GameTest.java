@@ -1,7 +1,6 @@
 import model.Board;
 import model.Dice;
 import model.Player;
-import model.Snake;
 import org.junit.Assert;
 import org.junit.Test;
 import org.mockito.ArgumentCaptor;
@@ -18,10 +17,6 @@ public class GameTest {
 
         Player player = mock(Player.class);
         ArgumentCaptor<Integer> positionCapture = ArgumentCaptor.forClass(Integer.class);
-
-        Snake snake = mock(Snake.class);
-        when(snake.getHead()).thenReturn(5);
-        when(snake.getTail()).thenReturn(2);
 
         Board board = mock(Board.class);
         when(board.getNewPosition(player, 2)).thenReturn(4);
