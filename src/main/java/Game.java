@@ -20,7 +20,7 @@ public class Game {
             int result = dice.throw_();
             int newPosition = board.getNewPosition(player, result);
             player.setPosition(newPosition);
-            System.out.println("Turn " + i + 1);
+            System.out.println("Turn " + (i + 1));
             System.out.println(player);
         }
     }

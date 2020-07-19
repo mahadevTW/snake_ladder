@@ -1,12 +1,12 @@
 import model.Board;
 import model.Dice;
 import model.Player;
-import org.junit.Assert;
 import org.junit.Test;
 import org.mockito.ArgumentCaptor;
 
 import java.util.List;
 
+import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 
 public class GameTest {
@@ -26,7 +26,7 @@ public class GameTest {
         game.start();
         verify(player, times(2)).setPosition(positionCapture.capture());
         List<Integer> allPositions = positionCapture.getAllValues();
-        Assert.assertEquals(Integer.valueOf(4), allPositions.get(0));
-        Assert.assertEquals(Integer.valueOf(7), allPositions.get(1));
+        assertEquals(Integer.valueOf(4), allPositions.get(0));
+        assertEquals(Integer.valueOf(7), allPositions.get(1));
     }
 }
